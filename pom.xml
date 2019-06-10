@@ -136,7 +136,7 @@
         </plugins>
 
         <filters>
-            <filter>src/main/filters/log-${build.profile.id}.properties</filter>
+            <filter>src/main/java/filters/log-${build.profile.id}.properties</filter>
         </filters>
 
         <!--指定下面的目录为资源文件-->
