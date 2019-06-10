@@ -7,7 +7,6 @@ import com.xuele.log.send.kafka.formatter.Formatter;
 import com.xuele.log.send.kafka.formatter.JsonFormatter;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -80,7 +79,7 @@ public class KafkaAppender extends AppenderBase<ILoggingEvent> {
 
         try {
             ProducerRecord<String, String> producerRecord = new ProducerRecord<String, String>(topic, string);
-            final Future send = producer.send(producerRecord);
+            final Future<?> send = producer.send(producerRecord);
             if(syncSend){
                 send.get();
             }
