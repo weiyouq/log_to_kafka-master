@@ -11,6 +11,8 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
+    	<spring.boot.start.web>2.1.5.RELEASE</spring.boot.start.web>
+    	<mybatis.spring.boot.starter>2.0.1</mybatis.spring.boot.starter>
         <scala.version>2.11.8</scala.version>
         <spark.version>2.0.2</spark.version>
         <scala.redis.version>3.3</scala.redis.version>
@@ -32,6 +34,18 @@
       <!--   set JAVA_HOME="E:\jdk7"    -->
 
     <dependencies>
+    	
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.boot.start.web}</version>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis.spring.boot.starter}</version>
+		</dependency> -->
+    
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>

@@ -12,10 +12,8 @@ public class SendTest {
 
     public static void main(String[] args) {
 
-        for(int i=500;i<=510;i++) {
+        for(int i=10;i<=20;i++) {
             logger.info("hadoop数据：{}",i);
         }
-
-
     }
 }
